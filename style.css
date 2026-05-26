@@ -3,7 +3,7 @@
 -------------------- */
 
 :root {
-  --theme-color: #00a0a0;
+  --theme-color: #f39c12;
 }
 
 * {
@@ -19,6 +19,7 @@ body {
   margin: 0;
   padding: 30px;
   color: #333;
+  background-color:#faf7f2;/* ★この行を追加（ものすごく薄い暖色系の白） */
 }
 
 /* --------------------
@@ -38,7 +39,11 @@ a {
   color: var(--theme-color);
   text-decoration: none;
 }
-
+a:hover {
+  opacity: 0.7; /* マウスを乗せたときに少し透明（薄く）にする */
+  text-decoration: underline; /* マウスを乗せたときだけ下線をつける */
+}
+        
 /* --------------------
         リスト
 -------------------- */
@@ -47,7 +52,7 @@ ul {
   list-style: none;
 }
 li:before {
-  content: "★";
+  content: "🦊";/* 星（★）からきつねの絵文字に変更 */
   color: var(--theme-color);
 }
 
@@ -69,7 +74,7 @@ tr:nth-child(2n) {
 }
 th {
   background: var(--theme-color);
-  color: #fff;
+  color: #333;/* #fff から #333（濃いグレー）に変更して文字をクッキリさせる */
 }
 th, td {
   border: solid 1px #f0f0f0;
